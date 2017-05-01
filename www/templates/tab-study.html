@@ -1,0 +1,30 @@
+<ion-view view-title="Study">
+  <ion-content>
+    <script>
+
+      </script>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper" >
+        <div class="front">
+      
+          <!-- front content -->
+          <h5 style="text-decoration: underline">{{question.subject}}</h5>
+          <h2>{{question.question}}</h2>
+        </div>
+        <div class="back">
+          <!-- back content -->
+          <h5>{{question.answer}}</h5>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id="currentCard">
+      <p>{{current + 1}} of {{questions.length}}</p>
+    </div>
+    <div id="changeQ">
+      <a class="button icon-left ion-chevron-left button-assertive" ng-click="prevQuestion()">Previous</a>
+      <button class="button button-positive">Flip</button>
+      <a class="button icon-right ion-chevron-right button-balanced" ng-click="nextQuestion()">Next</a>
+    </div>
+  </ion-content>
+</ion-view>
